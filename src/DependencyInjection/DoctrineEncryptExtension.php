@@ -24,7 +24,7 @@ class DoctrineEncryptExtension extends Extension
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         // Create configuration object
         $configuration = new Configuration();
@@ -39,7 +39,7 @@ class DoctrineEncryptExtension extends Extension
 
         // Set parameters
         $container->setParameter('ambta_doctrine_encrypt.encryptor_class_name', $config['encryptor_class_full']);
-        $container->setParameter('ambta_doctrine_encrypt.secret_key_path',$config['secret_directory_path'].'/.'.$config['encryptor_class'].'.key');
+        $container->setParameter('ambta_doctrine_encrypt.secret_key_path', $config['secret_directory_path'] . '/.' . $config['encryptor_class'] . '.key');
 
         // Load service file
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
