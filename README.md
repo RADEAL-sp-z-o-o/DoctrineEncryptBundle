@@ -9,6 +9,8 @@
 
 ### Introduction
 
+This fork works with Symfony7,8, doctrine 3+
+
 This is a fork from the original bundle created by ambta which can be found here:
 [ambta/DoctrineEncryptBundle](https://github.com/ambta/DoctrineEncryptBundle)
 
